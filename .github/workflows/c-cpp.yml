@@ -38,7 +38,9 @@ jobs:
         cd $GITHUB_WORKSPACE/kernel_workspace
         mkdir clang-aosp
         git clone -q --depth=1 https://github.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r416183d clang-aosp
-    
+        wget https://github.com/laityts/mkdtimg/releases/download/220319/mkdtimg-x86_64-220319.zip
+        unzip mkdtimg-x86_64-220319.zip
+        mv mkdtimg-x86_64-220319/libs/x86_64/mkdtimg clang-aosp/bin/
     
     
     - name: 下载内核源码
